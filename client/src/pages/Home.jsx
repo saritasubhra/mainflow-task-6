@@ -10,8 +10,6 @@ function Home() {
     async function fetchProduct() {
       try {
         const res = await axios.get(`/products`);
-        console.log(res);
-
         setProducts(res.data.data);
       } catch (error) {
         toast.error(error.response.data.message);
@@ -24,7 +22,7 @@ function Home() {
   return (
     <div className="min-h-screen">
       <div className="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h1 className="text-center text-4xl sm:text-5xl font-bold text-emerald-400 mb-8">
+        <h1 className="text-center text-4xl sm:text-5xl font-bold mb-8">
           Products
         </h1>
 
